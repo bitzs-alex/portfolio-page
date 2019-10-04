@@ -1,0 +1,15 @@
+{
+  "name": "PortfolioPage",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "watch:sass": "node-sass --output-style expanded -w ./sass/ -o ./css/",
+    "watch:pug": "pug -P -w ./pug/ -o ./",
+    "local:server": "live-server",
+    "start:build": "run-p local:server watch:sass watch:pug"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

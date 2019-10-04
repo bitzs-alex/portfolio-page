@@ -1,0 +1,66 @@
+/*
+    About Section Layout Style Rules
+    *****************************************/
+.about
+    padding: $padding-section 0
+
+    &__wrapper
+        display: flex
+        align-items: center
+        justify-content: center
+        margin-top: $padding-section
+
+    &__fig
+        width: 36rem
+        height: 36rem
+        float: left
+        overflow: hidden
+        border-radius: 50%
+        shape-outside: circle(50%)
+        margin: $space-large
+            top: 0
+
+    &__img
+        width: 100%
+        height: 100%
+        object-fit: cover
+        object-position: center top
+
+    &__content
+        flex: 0 0 80% 
+
+        p
+            text-align: justify
+
+@mixin about--lg()
+    .about
+        &__fig
+            width: 32rem
+            height: 32rem
+
+        &__content
+            flex: 0 0 90% 
+
+@mixin about--md()
+    .about
+        &__fig
+            width: 28rem
+            height: 28rem
+
+@mixin about--sm()
+    .about
+        padding: $padding-section-sm 0
+        
+        &__wrapper
+            margin-top: $space-medium
+
+        &__fig
+            width: 22rem
+            height: 22rem
+            float: none
+            shape-outside: none
+            margin-left: auto
+            margin-right: auto
+
+        &__content
+            flex: 0 0 100% 

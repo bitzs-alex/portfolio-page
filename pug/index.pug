@@ -1,0 +1,272 @@
+//- Mixins
+mixin addSkill(tech, progress)
+    li.skills-list__item
+        h3.skills-list__title #{tech}
+        .skills-list__progress(data-progress=progress)
+            .skills-list__progress__bar
+            span.skills-list__progress__percent #{progress}%
+                span.skills-list__progress__percent__wrapper.skills-list__progress__percent__wrapper--top
+                span.skills-list__progress__percent__wrapper.skills-list__progress__percent__wrapper--bottom
+
+<!DOCTYPE html>
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        meta(http-equiv="X-UA-Compatible", content="ie=edge")
+        title Bitzs Alex - Personal Portfolio
+        meta(name="description" content="This is a sample portfolio site with all the contents about me and the projects I've done so far.")
+        // Portfolio Favicon 
+        link(rel='apple-touch-icon' sizes='57x57' href='./img/favicon/apple-icon-57x57.png')
+        link(rel='apple-touch-icon' sizes='60x60' href='./img/favicon/apple-icon-60x60.png')
+        link(rel='apple-touch-icon' sizes='72x72' href='./img/favicon/apple-icon-72x72.png')
+        link(rel='apple-touch-icon' sizes='76x76' href='./img/favicon/apple-icon-76x76.png')
+        link(rel='apple-touch-icon' sizes='114x114' href='./img/favicon/apple-icon-114x114.png')
+        link(rel='apple-touch-icon' sizes='120x120' href='./img/favicon/apple-icon-120x120.png')
+        link(rel='apple-touch-icon' sizes='144x144' href='./img/favicon/apple-icon-144x144.png')
+        link(rel='apple-touch-icon' sizes='152x152' href='./img/favicon/apple-icon-152x152.png')
+        link(rel='apple-touch-icon' sizes='180x180' href='./img/favicon/apple-icon-180x180.png')
+        link(rel='icon' type='image/png' sizes='192x192' href='./img/favicon/android-icon-192x192.png')
+        link(rel='icon' type='image/png' sizes='32x32' href='./img/favicon/favicon-32x32.png')
+        link(rel='icon' type='image/png' sizes='96x96' href='./img/favicon/favicon-96x96.png')
+        link(rel='icon' type='image/png' sizes='16x16' href='./img/favicon/favicon-16x16.png')
+        link(rel='manifest' href='./img/favicon/manifest.json')
+        meta(name='msapplication-TileColor' content='#ffffff')
+        meta(name='msapplication-TileImage' content='./img/favicon/ms-icon-144x144.png')
+        meta(name='theme-color' content='#ffffff')
+        // Google Fonts
+        link(rel="stylesheet", href="https://fonts.googleapis.com/css?family=Dosis:300,400,700|Poppins:400,700,900|Josefin+Sans:400,700|Roboto+Slab:700&display=swap")
+        // Portfolio Site Stylesheet
+        link(rel="stylesheet", href="./css/app.css")
+        // FontAwesome library Kit
+        script(src="https://kit.fontawesome.com/c9f8d22a60.js" crossorigin="anonymous")
+    body
+        navbar#navbar
+            .container
+                .navbar
+                    .navbar__logo
+                        a.navbar__logo__link(href="index.html")
+                            img.navbar__logo__img(srcset="./img/logo-1x.png 1x, ./img/logo-2x.png 2x" src="./img/logo-1x.png", alt="My Portfolio Site Logo")
+
+                    .navbar__nav-toggler
+                        a.navbar__nav-toggler__link(href="")
+                            span.navbar__nav-toggler__link__icon-wrapper
+                                span.navbar__nav-toggler__link__icon
+
+                    .navbar__navigation
+                        ul.main-navigation
+                            li.main-navigation__item
+                                a.main-navigation__link(data-content="profile" href="#about") #[span.main-navigation__link__text profile]
+                            li.main-navigation__item
+                                a.main-navigation__link(data-content="skills" href="#skills") #[span.main-navigation__link__text skills]
+                            li.main-navigation__item
+                                a.main-navigation__link(data-content="portfolio" href="#projects") #[span.main-navigation__link__text portfolio]
+                            li.main-navigation__item
+                                a.main-navigation__link(data-content="contact" href="#contact") #[span.main-navigation__link__text contact]
+
+        main#main
+            section#welcome-section.hero
+                .hero__content
+                    .hero__wrapper
+                        h1 Hello, Stranger!
+                        p Betizazu Alemu here.  
+            
+            section#about.about
+                .container
+                    .heading.heading--center
+                        h2.heading__title profile
+                        p.heading__description A man with passion and creativity.
+                    
+                    .about__wrapper 
+                        .about__content
+                            figure.about__fig
+                                img.about__img(srcset="./img/mine-picture-sm.jpg 200w, ./img/mine-picture-1x.jpg 400w, ./img/mine-picture-2x.jpg 800w" sizes="(max-width: 768px) 25.78vw, (max-width: 1024px) 23.24vw, (max-width: 1366px) 23.95vw, 400px" src="./img/mine-picture-1x.jpg", alt="Picture of Mine that I took myself")
+                            p I'm a man who is enthusiastic for making client's thoughts and needs real, driven by a creative mind set, and passionate to create new things.
+                            p I found myself thrilled in Websites and Web Application Development basically in Front-End Web. I enjoy myself in a Front-End scripting Languages like HTML, CSS, CSS Flexbox and CSS Grid with an intermediate level of JS, and excellent in turning photoshop designs to websites.
+                            p Also I like working in a team, and give more attention with willingness to spend lot of my time on fixing little details, as the little details unite and constitute the whole website.
+                            
+                            ul.address
+                                li.address__item
+                                    svg.address__icon
+                                        use(xlink:href="img/address-sprite.svg#location-pin")
+                                    span.address__content Hawassa, Ethiopia
+                                li.address__item
+                                    svg.address__icon
+                                        use(xlink:href="img/address-sprite.svg#mail")
+                                    a.address__content(href="mailto:bitzsalex@gmail.com") bitzsalex@gmail.com
+                                li.address__item
+                                    svg.address__icon
+                                        use(xlink:href="img/address-sprite.svg#smartphone")
+                                    a.address__content(href="tel:0908277022") (+251) 908-277-022
+
+            section#skills.skills
+                .container
+                    .heading
+                        h2.heading__title skills
+                        p.heading__description List of skills I enjoy having
+
+                    .skills__wrapper
+                        .skills__content
+                            blockquote.blockquote
+                                p.blockquote__text The best yardstick for our progress is not other people, but ourselves. Am I better than I was yesterday? This is the only question worth asking. As long as you go to bed at night a better practitioner than the one who woke up that morning, you have succeeded. Your worth should have nothing to do with how your progress stacks up relative to another.
+                                p.blockquote__author Chris Matakas
+
+                        ul.skills-list
+                            +addSkill('HTML', 92)
+                            +addSkill('CSS/CSS3', 95)
+                            +addSkill('Javascript', 60)
+                            +addSkill('NPM', 40)
+                            +addSkill('Pug', 70)
+                            +addSkill('Sass', 75)
+                            +addSkill('Photoshop', 35)
+
+            section#projects.portfolio
+                .container
+                    .heading.heading--center
+                        h2.heading__title portfolio
+                        p.heading__description List of projects I put my hands on
+
+                    .portfolio__content
+                        p.portfolio__text Feel free to take a journey and see what I've done so far. And if you have any bad or constructive suggestions drop me something through my contacts listed on contacts section.
+                        ul.project-tiles
+                            li.project-tiles__buttons
+                                button.project-tiles__button.project-tiles__button--prev
+                                    i.project-tiles__button__icon.fa.fa-chevron-left
+                                button.project-tiles__button.project-tiles__button--next
+                                    i.project-tiles__button__icon.fa.fa-chevron-right
+
+                            li.project-tile
+                                a.project-tile__link(href="https://codepen.io/bitzs-alex/full/JjPBrBK" target="_blank")
+                                    figure.project-tile__img-container
+                                        img.project-tile__img(srcset="./img/tribute-page-sm.jpg 540w, ./img/tribute-page-lg.jpg 1348w" sizes="(max-width: 576px) 51.56vw, (max-width: 768px) 29.94vw, (max-width: 1024px) 19.53vw, (max-width: 1366px) 19.03vw, 800px" src="./img/tribute-page-sm.jpg", alt="Tribute Page Project Picture")
+                                    h3.project-tile__heading Tribute Page
+                                    ul.project-tile__technologies.technology
+                                        li.technology__item
+                                            svg.technology__icon
+                                                use(xlink:href="./img/svg-spirite.svg#icon-html")
+                                            span.technology__name HTML
+                                        li.technology__item
+                                            svg.technology__icon
+                                                use(xlink:href="./img/svg-spirite.svg#icon-css")
+                                            span.technology__name CSS
+                                        li.technology__item &nbsp;
+                            li.project-tile
+                                a.project-tile__link(href="https://codepen.io/bitzs-alex/full/RwbqLWX" target="_blank")
+                                    figure.project-tile__img-container
+                                        img.project-tile__img(srcset="./img/survey-form-sm.jpg 540w, ./img/survey-form-lg.jpg 1348w" sizes="(max-width: 576px) 51.56vw, (max-width: 768px) 29.94vw, (max-width: 1024px) 19.53vw, (max-width: 1366px) 19.03vw, 800px" src="./img/survey-form-sm.jpg", alt="Survey Form Project Picture")
+                                    h3.project-tile__heading Survey form
+                                    ul.project-tile__technologies.technology
+                                        li.technology__item
+                                            svg.technology__icon
+                                                use(xlink:href="./img/svg-spirite.svg#icon-html")
+                                            span.technology__name HTML
+                                        li.technology__item
+                                            svg.technology__icon
+                                                use(xlink:href="./img/svg-spirite.svg#icon-css")
+                                            span.technology__name CSS
+                                        li.technology__item
+                                            svg.technology__icon
+                                                use(xlink:href="./img/svg-spirite.svg#icon-javascript")
+                                            span.technology__name JS
+                            li.project-tile
+                                a.project-tile__link(href="https://codepen.io/bitzs-alex/full/zYOygeZ" target="_blank")
+                                    figure.project-tile__img-container
+                                        img.project-tile__img(srcset="./img/product-landing-page-sm.jpg 540w, ./img/product-landing-page-lg.jpg 1348w" sizes="(max-width: 576px) 51.56vw, (max-width: 768px) 29.94vw, (max-width: 1024px) 19.53vw, (max-width: 1366px) 19.03vw, 800px" src="./img/product-landing-page-sm.jpg", alt="Product Landing Page Project Picture")
+                                    h3.project-tile__heading Product Landing Page
+                                    ul.project-tile__technologies.technology
+                                        li.technology__item
+                                            svg.technology__icon
+                                                use(xlink:href="./img/svg-spirite.svg#icon-html")
+                                            span.technology__name HTML
+                                        li.technology__item
+                                            svg.technology__icon
+                                                use(xlink:href="./img/svg-spirite.svg#icon-css")
+                                            span.technology__name CSS
+                                        li.technology__item
+                                            svg.technology__icon
+                                                use(xlink:href="./img/svg-spirite.svg#icon-javascript")
+                                            span.technology__name JS
+                            li.project-tile
+                                a.project-tile__link(href="https://codepen.io/bitzs-alex/full/pozYqwQ" target="_blank")
+                                    figure.project-tile__img-container
+                                        img.project-tile__img(srcset="./img/technical-documentation-page-sm.jpg 540w, ./img/technical-documentation-page-lg.jpg 1348w" sizes="(max-width: 576px) 51.56vw, (max-width: 768px) 29.94vw, (max-width: 1024px) 19.53vw, (max-width: 1366px) 19.03vw, 800px" src="./img/technical-documentation-page-sm.jpg", alt="Technical Documentation Page Project Picture")
+                                    h3.project-tile__heading Technical Documentation Page
+                                    ul.project-tile__technologies.technology
+                                        li.technology__item
+                                            svg.technology__icon
+                                                use(xlink:href="./img/svg-spirite.svg#icon-pug")
+                                            span.technology__name Pug
+                                        li.technology__item
+                                            svg.technology__icon
+                                                use(xlink:href="./img/svg-spirite.svg#icon-sass")
+                                            span.technology__name Sass
+                                        li.technology__item
+                                            svg.technology__icon
+                                                use(xlink:href="./img/svg-spirite.svg#icon-javascript")
+                                            span.technology__name JS
+                                        li.technology__item
+                                            svg.technology__icon
+                                                use(xlink:href="./img/svg-spirite.svg#icon-npm")
+                                            span.technology__name Npm
+                            li.project-tile
+                                a.project-tile__link(href="https://codepen.io/bitzs-alex/full/pozYqwQ" target="_blank")
+                                    figure.project-tile__img-container
+                                        img.project-tile__img(srcset="./img/portfolio-page-sm.jpg 540w, ./img/portfolio-page-lg.jpg 1348w" sizes="(max-width: 576px) 51.56vw, (max-width: 768px) 29.94vw, (max-width: 1024px) 19.53vw, (max-width: 1366px) 19.03vw, 800px" src="./img/portfolio-page-sm.jpg", alt="Portfolio Page Project Picture")
+                                    h3.project-tile__heading Portfolio Page
+                                    ul.project-tile__technologies.technology
+                                        li.technology__item
+                                            svg.technology__icon
+                                                use(xlink:href="./img/svg-spirite.svg#icon-pug")
+                                            span.technology__name Pug
+                                        li.technology__item
+                                            svg.technology__icon
+                                                use(xlink:href="./img/svg-spirite.svg#icon-sass")
+                                            span.technology__name Sass
+                                        li.technology__item
+                                            svg.technology__icon
+                                                use(xlink:href="./img/svg-spirite.svg#icon-javascript")
+                                            span.technology__name JS
+                                        li.technology__item
+                                            svg.technology__icon
+                                                use(xlink:href="./img/svg-spirite.svg#icon-npm")
+                                            span.technology__name Npm
+
+                        .portfolio__profile
+                            a.btn#profile-link(href="https://www.freecodecamp.org/bitzs-alex" target="_blank") see all projects
+
+            section#contact.contact
+                .container
+                    .heading.heading--center
+                        h2.heading__title contact
+                        p.heading__description Let's connect and made your dreams real
+
+                    .contact__content
+                        p.contact__text Got an idea of new project but you couldn't be able to turn it real then am here for you. Let's connect and Talk.
+                        ul.social-media
+                            li.social-media__item
+                                a.social-media__link.social-media__link--facebook(href="facebook.com")
+                                    i.social-media__icon.fab.fa-facebook-f
+                            li.social-media__item
+                                a.social-media__link.social-media__link--instagram(href="instagram.com")
+                                    i.social-media__icon.fab.fa-instagram
+                            li.social-media__item
+                                a.social-media__link.social-media__link--github(href="github.com")
+                                    i.social-media__icon.fab.fa-github
+                            li.social-media__item
+                                a.social-media__link.social-media__link--twitter(href="twitter.com")
+                                    i.social-media__icon.fab.fa-twitter
+                            li.social-media__item
+                                a.social-media__link.social-media__link--linkedin(href="linkedin.com")
+                                    i.social-media__icon.fab.fa-linkedin-in
+            
+        footer#footer.footer
+            .container
+                .footer__wrapper
+                    .footer__copyright
+                        p &copy; 2019 bitzs-alex.
+
+                    .footer__designed
+                        p designed &amp; build for #[a(href="https://www.freecodecamp.org" target="_blank") FCC].
+
+        script(src="./js/script.js")
+        script(src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js")

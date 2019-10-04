@@ -1,0 +1,42 @@
+/*
+    Button Style Rules
+    *****************************************/
+.btn
+    z-index: 1
+    border: none
+    outline: none
+    cursor: pointer
+    color: $color-golden
+    padding: $space-small $space-medium
+    display: inline-block
+    text-transform: capitalize
+    transition: all .3s
+    position: relative
+    font-family: inherit
+    overflow: hidden
+    font-size: 0.9em
+    border: .1rem solid $color-golden
+
+    &::before
+        content: ''
+        display: inline-block
+        position: absolute
+        top: 0
+        left: 0
+        right: 0
+        margin: 0 auto
+        height: 100%
+        width: 100%
+        background: $color-golden
+        z-index: -1
+        transform-origin: center top
+        transition: all .3s
+        transform: scale(1.2, 0)
+        border: 1px solid $color-golden
+        
+    &:hover
+        color: white
+
+        &::before
+            transform: scale(1.2, 1)
+            animation: bounce .4s 

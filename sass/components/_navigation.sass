@@ -1,0 +1,61 @@
+/*
+    Main Navigation Style Rules
+    *****************************************/
+.main-navigation
+    display: flex
+
+    &__item
+        display: flex
+        align-items: center
+        position: relative
+
+    &__link
+        $link: &
+        position: relative
+        overflow: hidden
+
+        &__text
+            display: block
+            position: relative
+            top: 0
+            left: 0
+            z-index: 1
+            transition: all .3s
+            padding: $space-small $space-medium
+
+        &::before
+            content: '' 
+            display: block
+            background: $color-teal
+            position: absolute
+            top: 0
+            left: 0
+            z-index: 0
+            width: 100%
+            height: 100%
+            transform: scale(1, 0)
+            padding: $space-small $space-medium
+
+        &:hover
+            #{$link}__text
+                color: $color-whitish
+
+            &::before
+                transform: scale(1.2, 1)
+                animation: bounce .4s
+
+// to be called in media-queries.sass file
+@mixin navigation--sm()
+    .main-navigation
+        display: flex
+        flex-direction: column
+        position: absolute
+        top: 50%
+        left: 50%
+        width: 60%
+        align-items: center
+        transform: translate(-50%, -50%) scale(0, 0)
+        transition: transform .4s cubic-bezier(.23, .74, .91, .61)
+
+        .navbar__navigation.active &
+            transform: translate(-50%, -50%) scale(1, 1)

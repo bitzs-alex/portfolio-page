@@ -1,0 +1,37 @@
+/*
+    Contact Style Rules
+    *****************************************/
+.contact
+    color: $color-whitish
+    padding: $padding-section 0
+    background:
+        image: radial-gradient(circle at center bottom, rgba($color-violet, 0.4), rgba($color-dark-violet, 0.8) 30%, $color-dark-violet 54%), url(../img/bg-img-1.jpg), url(../img/bg-img-8.jpg)
+        repeat: no-repeat
+        attachment: fixed
+        position: center bottom
+
+    &__text
+        width: 60%
+        text-align: center
+        margin: $padding-section auto 
+
+// to be called at media-queries.sass file
+@mixin contact--md()
+    .contact
+        &__text
+            width: 80%
+            margin: $space-large auto
+
+@mixin contact--sm()
+    .contact
+        padding: $padding-section-sm 0
+        
+        &__text
+            width: 90%
+
+@mixin contact--x-sm()
+    .contact
+        &__text
+            width: 100%
+            margin: $space-medium 0
+    

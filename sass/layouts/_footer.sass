@@ -1,0 +1,29 @@
+/*
+    Footer Style Rules
+    *****************************************/
+.footer
+    width: 100%
+
+    &__wrapper
+        display: flex
+        justify-content: space-between
+        padding: $space-medium 0
+
+        p
+            margin-bottom: 0
+            text-transform: capitalize
+
+        a
+            color: $color-teal
+
+// to be called in mediq-queries.sass file
+@mixin footer--x-sm()
+    .footer
+        &__wrapper
+            flex-direction: column
+            padding: $space-small 0
+            align-items: center
+
+        &__copyright
+            p
+                margin-bottom: 1rem

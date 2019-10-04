@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+    <title>Bitzs Alex - Personal Portfolio</title>
+    <meta name="description" content="This is a sample portfolio site with all the contents about me and the projects I've done so far."/>
+    <!-- Portfolio Favicon -->
+    <link rel="apple-touch-icon" sizes="57x57" href="./img/favicon/apple-icon-57x57.png"/>
+    <link rel="apple-touch-icon" sizes="60x60" href="./img/favicon/apple-icon-60x60.png"/>
+    <link rel="apple-touch-icon" sizes="72x72" href="./img/favicon/apple-icon-72x72.png"/>
+    <link rel="apple-touch-icon" sizes="76x76" href="./img/favicon/apple-icon-76x76.png"/>
+    <link rel="apple-touch-icon" sizes="114x114" href="./img/favicon/apple-icon-114x114.png"/>
+    <link rel="apple-touch-icon" sizes="120x120" href="./img/favicon/apple-icon-120x120.png"/>
+    <link rel="apple-touch-icon" sizes="144x144" href="./img/favicon/apple-icon-144x144.png"/>
+    <link rel="apple-touch-icon" sizes="152x152" href="./img/favicon/apple-icon-152x152.png"/>
+    <link rel="apple-touch-icon" sizes="180x180" href="./img/favicon/apple-icon-180x180.png"/>
+    <link rel="icon" type="image/png" sizes="192x192" href="./img/favicon/android-icon-192x192.png"/>
+    <link rel="icon" type="image/png" sizes="32x32" href="./img/favicon/favicon-32x32.png"/>
+    <link rel="icon" type="image/png" sizes="96x96" href="./img/favicon/favicon-96x96.png"/>
+    <link rel="icon" type="image/png" sizes="16x16" href="./img/favicon/favicon-16x16.png"/>
+    <link rel="manifest" href="./img/favicon/manifest.json"/>
+    <meta name="msapplication-TileColor" content="#ffffff"/>
+    <meta name="msapplication-TileImage" content="./img/favicon/ms-icon-144x144.png"/>
+    <meta name="theme-color" content="#ffffff"/>
+    <!-- Google Fonts-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Dosis:300,400,700|Poppins:400,700,900|Josefin+Sans:400,700|Roboto+Slab:700&amp;display=swap"/>
+    <!-- Portfolio Site Stylesheet-->
+    <link rel="stylesheet" href="./css/app.css"/>
+    <!-- FontAwesome library Kit-->
+    <script src="https://kit.fontawesome.com/c9f8d22a60.js" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <navbar id="navbar">
+      <div class="container">
+        <div class="navbar">
+          <div class="navbar__logo"><a class="navbar__logo__link" href="index.html"><img class="navbar__logo__img" srcset="./img/logo-1x.png 1x, ./img/logo-2x.png 2x" src="./img/logo-1x.png" alt="My Portfolio Site Logo"/></a></div>
+          <div class="navbar__nav-toggler"><a class="navbar__nav-toggler__link" href=""><span class="navbar__nav-toggler__link__icon-wrapper"><span class="navbar__nav-toggler__link__icon"></span></span></a></div>
+          <div class="navbar__navigation">
+            <ul class="main-navigation">
+              <li class="main-navigation__item"><a class="main-navigation__link" data-content="profile" href="#about"><span class="main-navigation__link__text">profile</span></a></li>
+              <li class="main-navigation__item"><a class="main-navigation__link" data-content="skills" href="#skills"><span class="main-navigation__link__text">skills</span></a></li>
+              <li class="main-navigation__item"><a class="main-navigation__link" data-content="portfolio" href="#projects"><span class="main-navigation__link__text">portfolio</span></a></li>
+              <li class="main-navigation__item"><a class="main-navigation__link" data-content="contact" href="#contact"><span class="main-navigation__link__text">contact</span></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </navbar>
+    <main id="main">
+      <section class="hero" id="welcome-section">
+        <div class="hero__content">
+          <div class="hero__wrapper">
+            <h1>Hello, Stranger!</h1>
+            <p>Betizazu Alemu here.  </p>
+          </div>
+        </div>
+      </section>
+      <section class="about" id="about">
+        <div class="container">
+          <div class="heading heading--center">
+            <h2 class="heading__title">profile</h2>
+            <p class="heading__description">A man with passion and creativity.</p>
+          </div>
+          <div class="about__wrapper"> 
+            <div class="about__content">
+              <figure class="about__fig"><img class="about__img" srcset="./img/mine-picture-sm.jpg 200w, ./img/mine-picture-1x.jpg 400w, ./img/mine-picture-2x.jpg 800w" sizes="(max-width: 768px) 25.78vw, (max-width: 1024px) 23.24vw, (max-width: 1366px) 23.95vw, 400px" src="./img/mine-picture-1x.jpg" alt="Picture of Mine that I took myself"/></figure>
+              <p>I'm a man who is enthusiastic for making client's thoughts and needs real, driven by a creative mind set, and passionate to create new things.</p>
+              <p>I found myself thrilled in Websites and Web Application Development basically in Front-End Web. I enjoy myself in a Front-End scripting Languages like HTML, CSS, CSS Flexbox and CSS Grid with an intermediate level of JS, and excellent in turning photoshop designs to websites.</p>
+              <p>Also I like working in a team, and give more attention with willingness to spend lot of my time on fixing little details, as the little details unite and constitute the whole website.</p>
+              <ul class="address">
+                <li class="address__item">
+                  <svg class="address__icon">
+                    <use xlink:href="img/address-sprite.svg#location-pin"></use>
+                  </svg><span class="address__content">Hawassa, Ethiopia</span>
+                </li>
+                <li class="address__item">
+                  <svg class="address__icon">
+                    <use xlink:href="img/address-sprite.svg#mail"></use>
+                  </svg><a class="address__content" href="mailto:bitzsalex@gmail.com">bitzsalex@gmail.com</a>
+                </li>
+                <li class="address__item">
+                  <svg class="address__icon">
+                    <use xlink:href="img/address-sprite.svg#smartphone"></use>
+                  </svg><a class="address__content" href="tel:0908277022">(+251) 908-277-022</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="skills" id="skills">
+        <div class="container">
+          <div class="heading">
+            <h2 class="heading__title">skills</h2>
+            <p class="heading__description">List of skills I enjoy having</p>
+          </div>
+          <div class="skills__wrapper">
+            <div class="skills__content">
+              <blockquote class="blockquote">
+                <p class="blockquote__text">The best yardstick for our progress is not other people, but ourselves. Am I better than I was yesterday? This is the only question worth asking. As long as you go to bed at night a better practitioner than the one who woke up that morning, you have succeeded. Your worth should have nothing to do with how your progress stacks up relative to another.</p>
+                <p class="blockquote__author">Chris Matakas</p>
+              </blockquote>
+            </div>
+            <ul class="skills-list">
+              <li class="skills-list__item">
+                <h3 class="skills-list__title">HTML</h3>
+                <div class="skills-list__progress" data-progress="92">
+                  <div class="skills-list__progress__bar"></div><span class="skills-list__progress__percent">92%<span class="skills-list__progress__percent__wrapper skills-list__progress__percent__wrapper--top"></span><span class="skills-list__progress__percent__wrapper skills-list__progress__percent__wrapper--bottom"></span></span>
+                </div>
+              </li>
+              <li class="skills-list__item">
+                <h3 class="skills-list__title">CSS/CSS3</h3>
+                <div class="skills-list__progress" data-progress="95">
+                  <div class="skills-list__progress__bar"></div><span class="skills-list__progress__percent">95%<span class="skills-list__progress__percent__wrapper skills-list__progress__percent__wrapper--top"></span><span class="skills-list__progress__percent__wrapper skills-list__progress__percent__wrapper--bottom"></span></span>
+                </div>
+              </li>
+              <li class="skills-list__item">
+                <h3 class="skills-list__title">Javascript</h3>
+                <div class="skills-list__progress" data-progress="60">
+                  <div class="skills-list__progress__bar"></div><span class="skills-list__progress__percent">60%<span class="skills-list__progress__percent__wrapper skills-list__progress__percent__wrapper--top"></span><span class="skills-list__progress__percent__wrapper skills-list__progress__percent__wrapper--bottom"></span></span>
+                </div>
+              </li>
+              <li class="skills-list__item">
+                <h3 class="skills-list__title">NPM</h3>
+                <div class="skills-list__progress" data-progress="40">
+                  <div class="skills-list__progress__bar"></div><span class="skills-list__progress__percent">40%<span class="skills-list__progress__percent__wrapper skills-list__progress__percent__wrapper--top"></span><span class="skills-list__progress__percent__wrapper skills-list__progress__percent__wrapper--bottom"></span></span>
+                </div>
+              </li>
+              <li class="skills-list__item">
+                <h3 class="skills-list__title">Pug</h3>
+                <div class="skills-list__progress" data-progress="70">
+                  <div class="skills-list__progress__bar"></div><span class="skills-list__progress__percent">70%<span class="skills-list__progress__percent__wrapper skills-list__progress__percent__wrapper--top"></span><span class="skills-list__progress__percent__wrapper skills-list__progress__percent__wrapper--bottom"></span></span>
+                </div>
+              </li>
+              <li class="skills-list__item">
+                <h3 class="skills-list__title">Sass</h3>
+                <div class="skills-list__progress" data-progress="75">
+                  <div class="skills-list__progress__bar"></div><span class="skills-list__progress__percent">75%<span class="skills-list__progress__percent__wrapper skills-list__progress__percent__wrapper--top"></span><span class="skills-list__progress__percent__wrapper skills-list__progress__percent__wrapper--bottom"></span></span>
+                </div>
+              </li>
+              <li class="skills-list__item">
+                <h3 class="skills-list__title">Photoshop</h3>
+                <div class="skills-list__progress" data-progress="35">
+                  <div class="skills-list__progress__bar"></div><span class="skills-list__progress__percent">35%<span class="skills-list__progress__percent__wrapper skills-list__progress__percent__wrapper--top"></span><span class="skills-list__progress__percent__wrapper skills-list__progress__percent__wrapper--bottom"></span></span>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      <section class="portfolio" id="projects">
+        <div class="container">
+          <div class="heading heading--center">
+            <h2 class="heading__title">portfolio</h2>
+            <p class="heading__description">List of projects I put my hands on</p>
+          </div>
+          <div class="portfolio__content">
+            <p class="portfolio__text">Feel free to take a journey and see what I've done so far. And if you have any bad or constructive suggestions drop me something through my contacts listed on contacts section.</p>
+            <ul class="project-tiles">
+              <li class="project-tiles__buttons">
+                <button class="project-tiles__button project-tiles__button--prev"><i class="project-tiles__button__icon fa fa-chevron-left"></i></button>
+                <button class="project-tiles__button project-tiles__button--next"><i class="project-tiles__button__icon fa fa-chevron-right"></i></button>
+              </li>
+              <li class="project-tile"><a class="project-tile__link" href="https://codepen.io/bitzs-alex/full/JjPBrBK" target="_blank">
+                  <figure class="project-tile__img-container"><img class="project-tile__img" srcset="./img/tribute-page-sm.jpg 540w, ./img/tribute-page-lg.jpg 1348w" sizes="(max-width: 576px) 51.56vw, (max-width: 768px) 29.94vw, (max-width: 1024px) 19.53vw, (max-width: 1366px) 19.03vw, 800px" src="./img/tribute-page-sm.jpg" alt="Tribute Page Project Picture"/></figure>
+                  <h3 class="project-tile__heading">Tribute Page</h3>
+                  <ul class="project-tile__technologies technology">
+                    <li class="technology__item">
+                      <svg class="technology__icon">
+                        <use xlink:href="./img/svg-spirite.svg#icon-html"></use>
+                      </svg><span class="technology__name">HTML</span>
+                    </li>
+                    <li class="technology__item">
+                      <svg class="technology__icon">
+                        <use xlink:href="./img/svg-spirite.svg#icon-css"></use>
+                      </svg><span class="technology__name">CSS</span>
+                    </li>
+                    <li class="technology__item">&nbsp;</li>
+                  </ul></a></li>
+              <li class="project-tile"><a class="project-tile__link" href="https://codepen.io/bitzs-alex/full/RwbqLWX" target="_blank">
+                  <figure class="project-tile__img-container"><img class="project-tile__img" srcset="./img/survey-form-sm.jpg 540w, ./img/survey-form-lg.jpg 1348w" sizes="(max-width: 576px) 51.56vw, (max-width: 768px) 29.94vw, (max-width: 1024px) 19.53vw, (max-width: 1366px) 19.03vw, 800px" src="./img/survey-form-sm.jpg" alt="Survey Form Project Picture"/></figure>
+                  <h3 class="project-tile__heading">Survey form</h3>
+                  <ul class="project-tile__technologies technology">
+                    <li class="technology__item">
+                      <svg class="technology__icon">
+                        <use xlink:href="./img/svg-spirite.svg#icon-html"></use>
+                      </svg><span class="technology__name">HTML</span>
+                    </li>
+                    <li class="technology__item">
+                      <svg class="technology__icon">
+                        <use xlink:href="./img/svg-spirite.svg#icon-css"></use>
+                      </svg><span class="technology__name">CSS</span>
+                    </li>
+                    <li class="technology__item">
+                      <svg class="technology__icon">
+                        <use xlink:href="./img/svg-spirite.svg#icon-javascript"></use>
+                      </svg><span class="technology__name">JS</span>
+                    </li>
+                  </ul></a></li>
+              <li class="project-tile"><a class="project-tile__link" href="https://codepen.io/bitzs-alex/full/zYOygeZ" target="_blank">
+                  <figure class="project-tile__img-container"><img class="project-tile__img" srcset="./img/product-landing-page-sm.jpg 540w, ./img/product-landing-page-lg.jpg 1348w" sizes="(max-width: 576px) 51.56vw, (max-width: 768px) 29.94vw, (max-width: 1024px) 19.53vw, (max-width: 1366px) 19.03vw, 800px" src="./img/product-landing-page-sm.jpg" alt="Product Landing Page Project Picture"/></figure>
+                  <h3 class="project-tile__heading">Product Landing Page</h3>
+                  <ul class="project-tile__technologies technology">
+                    <li class="technology__item">
+                      <svg class="technology__icon">
+                        <use xlink:href="./img/svg-spirite.svg#icon-html"></use>
+                      </svg><span class="technology__name">HTML</span>
+                    </li>
+                    <li class="technology__item">
+                      <svg class="technology__icon">
+                        <use xlink:href="./img/svg-spirite.svg#icon-css"></use>
+                      </svg><span class="technology__name">CSS</span>
+                    </li>
+                    <li class="technology__item">
+                      <svg class="technology__icon">
+                        <use xlink:href="./img/svg-spirite.svg#icon-javascript"></use>
+                      </svg><span class="technology__name">JS</span>
+                    </li>
+                  </ul></a></li>
+              <li class="project-tile"><a class="project-tile__link" href="https://codepen.io/bitzs-alex/full/pozYqwQ" target="_blank">
+                  <figure class="project-tile__img-container"><img class="project-tile__img" srcset="./img/technical-documentation-page-sm.jpg 540w, ./img/technical-documentation-page-lg.jpg 1348w" sizes="(max-width: 576px) 51.56vw, (max-width: 768px) 29.94vw, (max-width: 1024px) 19.53vw, (max-width: 1366px) 19.03vw, 800px" src="./img/technical-documentation-page-sm.jpg" alt="Technical Documentation Page Project Picture"/></figure>
+                  <h3 class="project-tile__heading">Technical Documentation Page</h3>
+                  <ul class="project-tile__technologies technology">
+                    <li class="technology__item">
+                      <svg class="technology__icon">
+                        <use xlink:href="./img/svg-spirite.svg#icon-pug"></use>
+                      </svg><span class="technology__name">Pug</span>
+                    </li>
+                    <li class="technology__item">
+                      <svg class="technology__icon">
+                        <use xlink:href="./img/svg-spirite.svg#icon-sass"></use>
+                      </svg><span class="technology__name">Sass</span>
+                    </li>
+                    <li class="technology__item">
+                      <svg class="technology__icon">
+                        <use xlink:href="./img/svg-spirite.svg#icon-javascript"></use>
+                      </svg><span class="technology__name">JS</span>
+                    </li>
+                    <li class="technology__item">
+                      <svg class="technology__icon">
+                        <use xlink:href="./img/svg-spirite.svg#icon-npm"></use>
+                      </svg><span class="technology__name">Npm</span>
+                    </li>
+                  </ul></a></li>
+              <li class="project-tile"><a class="project-tile__link" href="https://codepen.io/bitzs-alex/full/pozYqwQ" target="_blank">
+                  <figure class="project-tile__img-container"><img class="project-tile__img" srcset="./img/portfolio-page-sm.jpg 540w, ./img/portfolio-page-lg.jpg 1348w" sizes="(max-width: 576px) 51.56vw, (max-width: 768px) 29.94vw, (max-width: 1024px) 19.53vw, (max-width: 1366px) 19.03vw, 800px" src="./img/portfolio-page-sm.jpg" alt="Portfolio Page Project Picture"/></figure>
+                  <h3 class="project-tile__heading">Portfolio Page</h3>
+                  <ul class="project-tile__technologies technology">
+                    <li class="technology__item">
+                      <svg class="technology__icon">
+                        <use xlink:href="./img/svg-spirite.svg#icon-pug"></use>
+                      </svg><span class="technology__name">Pug</span>
+                    </li>
+                    <li class="technology__item">
+                      <svg class="technology__icon">
+                        <use xlink:href="./img/svg-spirite.svg#icon-sass"></use>
+                      </svg><span class="technology__name">Sass</span>
+                    </li>
+                    <li class="technology__item">
+                      <svg class="technology__icon">
+                        <use xlink:href="./img/svg-spirite.svg#icon-javascript"></use>
+                      </svg><span class="technology__name">JS</span>
+                    </li>
+                    <li class="technology__item">
+                      <svg class="technology__icon">
+                        <use xlink:href="./img/svg-spirite.svg#icon-npm"></use>
+                      </svg><span class="technology__name">Npm</span>
+                    </li>
+                  </ul></a></li>
+            </ul>
+            <div class="portfolio__profile"><a class="btn" id="profile-link" href="https://www.freecodecamp.org/bitzs-alex" target="_blank">see all projects</a></div>
+          </div>
+        </div>
+      </section>
+      <section class="contact" id="contact">
+        <div class="container">
+          <div class="heading heading--center">
+            <h2 class="heading__title">contact</h2>
+            <p class="heading__description">Let's connect and made your dreams real</p>
+          </div>
+          <div class="contact__content">
+            <p class="contact__text">Got an idea of new project but you couldn't be able to turn it real then am here for you. Let's connect and Talk.</p>
+            <ul class="social-media">
+              <li class="social-media__item"><a class="social-media__link social-media__link--facebook" href="facebook.com"><i class="social-media__icon fab fa-facebook-f"></i></a></li>
+              <li class="social-media__item"><a class="social-media__link social-media__link--instagram" href="instagram.com"><i class="social-media__icon fab fa-instagram"></i></a></li>
+              <li class="social-media__item"><a class="social-media__link social-media__link--github" href="github.com"><i class="social-media__icon fab fa-github"></i></a></li>
+              <li class="social-media__item"><a class="social-media__link social-media__link--twitter" href="twitter.com"><i class="social-media__icon fab fa-twitter"></i></a></li>
+              <li class="social-media__item"><a class="social-media__link social-media__link--linkedin" href="linkedin.com"><i class="social-media__icon fab fa-linkedin-in"></i></a></li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="footer" id="footer">
+      <div class="container">
+        <div class="footer__wrapper">
+          <div class="footer__copyright">
+            <p>&copy; 2019 bitzs-alex.</p>
+          </div>
+          <div class="footer__designed">
+            <p>designed &amp; build for <a href="https://www.freecodecamp.org" target="_blank">FCC</a>.</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="./js/script.js"></script>
+    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+  </body>
+</html>

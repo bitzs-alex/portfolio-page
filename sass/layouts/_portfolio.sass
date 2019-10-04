@@ -1,0 +1,33 @@
+/*
+    Portfolio Section Style Rules
+    *****************************************/
+.portfolio
+    padding: $padding-section 0
+
+    &__content
+        width: 80%
+        margin: auto
+
+    &__text
+        font-size: 1.2em
+        text-align: center
+        margin-bottom: $space-large
+
+    &__profile
+        margin-top: $space-large
+        text-align: center
+
+@mixin portfolio--md()
+    .portfolio
+        &__content
+            width: 100%
+
+        &__text
+            margin-bottom: $space-medium
+
+        &__profile
+            margin-top: $space-medium
+
+@mixin portfolio--sm()
+    .portfolio
+        padding: $padding-section-sm 0

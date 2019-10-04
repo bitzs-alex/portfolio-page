@@ -1,0 +1,43 @@
+/*
+    Contact Component Style Rules
+    *****************************************/
+.address
+    width: 100%
+    display: flex
+    justify-content: space-around
+    margin-top: $space-large 
+
+    &__item
+        display: flex
+        flex-direction: column
+        align-items: center
+
+    &__icon
+        width: 4rem
+        height: 4rem
+        fill: $color-violet
+        margin-bottom: $space-small
+
+    a
+        &:hover
+            color: $color-violet
+
+// to be called mixins
+@mixin address--sm()
+    .address
+        flex-direction: column
+        margin-top: $space-medium 
+        justify-content: flex-start
+        align-items: flex-start
+
+        &__item
+            flex-direction: row
+            align-items: center
+            margin-bottom: $space-small
+
+        &__icon
+            width: 2.2rem
+            height: 2.2rem
+            margin-bottom: 0
+            margin-right: $space-small
+    

@@ -1,0 +1,288 @@
+/*
+    Project Tile Style Rules
+    *****************************************/
+.project-tiles
+    position: relative
+    height: 50rem 
+    background: rgba($color-golden, .16)
+
+    &__buttons
+        top: 50%
+        width: 100%
+        position: absolute
+        transform: translateY(-50%)
+
+    &__button
+        border: 0
+        width: 6rem
+        height: 6rem
+        outline: none
+        cursor: pointer
+        position: absolute
+        transition: all .3s
+        background: $color-background
+
+        &:disabled
+            cursor: not-allowed
+
+        &__icon
+            top: 0
+            left: 0
+            bottom: 0
+            right: 0
+            width: 3rem
+            height: 3rem
+            font-size: 2.4rem
+            text-align: center
+            line-height: 3rem !important
+            margin: auto
+            color: $color-whitish
+            position: absolute
+
+        &--prev
+            left: 0
+            transform: translate(-50%, -50%) 
+
+            &:hover
+                transform: translate(-50%, -50%) scale(1.1)
+
+        &--next
+            right: 0
+            transform: translate(50%, -50%)
+
+            &:hover
+                transform: translate(50%, -50%) scale(1.1)
+
+.project-tile 
+    $project: &
+    top: 5rem
+    left: 50%
+    width: 26rem
+    height: 40rem
+    transition: all .4s
+    position: absolute
+    pointer-events: none
+    transform: translateX(-50%)
+
+    &.first
+        z-index: 999
+        
+    &.second
+        z-index: 1
+
+    &.left
+        transform: perspective(600px) scale(.86) rotateY(20deg)
+
+        &.first
+            left: calc( 50% - 24rem )
+
+        &.second
+            left: calc( 50% - 32rem)
+
+    &.right
+        transform: perspective(600px) scale(.86) rotateY(-20deg)
+
+        &.first
+            left: calc( 50% - 2rem )
+
+        &.second
+            left: calc( 50% + 6rem )
+
+    &.current
+        z-index: 1000
+        pointer-events: all
+        transform: translateX(-50%)
+
+        #{$project}
+            &__img-container
+                filter: blur(0)
+
+    &__link
+        width: 100%
+        height: 100%
+        display: block
+        overflow: hidden
+        position: relative
+        background: $color-whitish
+        transition: transform .2s .3s
+
+        &:hover
+            transform: scale(1.2)
+
+            #{$project}
+                &__img-container
+                    height: 70%
+
+                    &::before
+                        background: rgba($color-dark-violet, .5)
+
+                &__heading
+                    bottom: 7rem
+                    color: currentColor 
+
+                &__technologies
+                    right: 0
+
+    &__img-container
+        width: 100%
+        height: 100%
+        position: relative
+        transition: all .3s
+        filter: blur(.2rem)
+
+        &::before
+            content: ''
+            top: 0
+            left: 0
+            right: 0
+            bottom: 0
+            transition: all .3s
+            background: rgba($color-dark-violet, .88)
+            position: absolute
+
+    &__img
+        width: 100%
+        height: 100%
+        object-fit: cover
+        transition: all .3s
+        object-position: center top
+
+    &__heading
+        position: absolute
+        font-size: 1.6rem
+        width: 100%
+        left: 0
+        bottom: 0
+        transition: all .3s
+        padding: $space-small
+        color: $color-whitish
+        font-family: $font-body-1
+
+    &__technologies
+        bottom: 0 
+        width: 100%
+        right: 100%
+        padding: 1rem $space-small
+        transition: all .3s
+        position: absolute
+
+@mixin project-tile--md()
+    .project-tiles
+        height: 40rem
+
+        &__button
+            width: 4rem
+            height: 4rem
+
+            &__icon
+                width: 1.6rem
+                height: 1.6rem
+                font-size: 1.8rem
+                line-height: 1.6rem !important
+
+    .project-tile 
+        $project: &
+        width: 20rem
+        height: 30rem
+
+        &.left
+            &.first
+                left: calc( 50% - 18rem )
+
+            &.second
+                left: calc( 50% - 26rem)
+
+        &__link
+            &:hover
+                #{$project}
+                    &__heading
+                        bottom: 5rem
+
+        &__heading
+            font-size: 1.3rem
+            padding: 1rem
+
+        &__technologies
+            padding: 1rem
+
+@mixin project-tile--sm()
+    .project-tiles
+        height: auto
+        background: none
+        display: flex
+        flex-wrap: wrap
+        justify-content: center
+
+        &__buttons
+            display: none
+
+    .project-tile 
+        $project: &
+        left: 0
+        top: 0
+        height: 34rem
+        flex-basis: 35%
+        margin-bottom: $space-medium
+        position: relative
+        pointer-events: all
+        transform: translateX(0)
+        box-shadow: 0 0 .8rem -.2rem rgba(#000, .34)
+
+        &:nth-of-type(2n)
+            margin-right: $space-medium 
+
+        &:last-of-type
+            margin-bottom: 0
+
+        &.left
+            transform: perspective(0) scale(1) rotateY(0deg)
+
+            &.first
+                left: 0
+
+            &.second
+                left: 0
+
+        &.right
+            transform: perspective(0) scale(1) rotateY(0deg)
+            
+            &.first
+                left: 0
+                
+            &.second
+                left: 0
+
+        &.current
+            transform: translateX(0)
+
+        &__link
+            &:hover
+                transform: scale(0)
+
+        &__img-container
+            height: 70%
+            filter: blur(0)
+
+            &::before
+                background: rgba($color-dark-violet, .6)
+
+        &__heading
+            bottom: 6.4rem
+            color: currentColor
+
+        &__technologies
+            right: 0
+            bottom: 1rem
+
+@mixin project-tile--x-sm()
+    .project-tiles
+        flex-direction: column
+        align-content: center
+
+    .project-tile 
+        $project: &
+        width: 60%
+        margin-bottom: $space-small
+
+        &:nth-of-type(2n)
+            margin-right: 0

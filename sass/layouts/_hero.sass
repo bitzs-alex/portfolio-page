@@ -1,0 +1,92 @@
+/*
+    Hero Section Layout Style Rules
+    *****************************************/
+.hero
+    top: 0
+    left: 0
+    height: 100vh
+    position: relative
+    background:
+        image: linear-gradient(to bottom, rgba($color-teal, .8), rgba($color-violet, .8), rgba($color-text, .8)), url(../img/bg-img-4.jpg)
+        repeat: no-repeat
+        size: cover
+        attachment: fixed
+    
+    &__wrapper
+        overflow: hidden
+
+    &__content
+        position: absolute
+        top: 60%
+        left: 16%
+
+        &::before,
+        &::after
+            content: ''
+            color: $color-whitish
+            position: absolute
+            display: inline-block
+            transition: all .3s
+            transform: translateX(-50%)
+
+        &::before
+            width: 1.6rem
+            height: 1.6rem
+            border: 0.4rem solid currentColor
+            top: -140%
+            left: 0
+            opacity: 0
+            border-radius: 50%
+            animation: fadeIn .5s forwards
+
+        &::after
+            width: 0.4rem
+            top: calc( -140% + 1.4rem )
+            background: currentColor 
+            transform-origin: center top
+            animation: slideDown .5s .5s forwards
+
+        h1
+            left: -100%
+            position: relative
+            padding: $space-small $space-medium
+            background: $color-whitish
+            mix-blend-mode: screen
+            transform-origin: left center
+            animation: slideRight 1s ease-out 1s forwards
+
+        p
+            opacity: 0
+            color: $color-whitish
+            padding-left: $space-medium
+            font-size: 2.4rem
+            font-family: $font-body-2
+            margin-bottom: 0
+            transform: translateY(100%)
+            animation: slideUp .5s ease-out 2s forwards 
+
+// To be called at media-queries.sass file
+@mixin hero--sm()
+    .hero
+        &__content
+            top: 50%
+            left: 50%
+            width: 60%
+            text-align: center
+            transform: translateX(-50%)
+
+            &::before,
+            &::after
+                display: none
+
+            h1
+                left: 0
+                margin-bottom: $space-small
+                transform: translateY(-100%)
+                transform-origin: center top
+                animation: animateDown 1s ease-out forwards
+
+            p
+                padding-left: 0
+                font-size: 2rem
+                animation: slideUp .8s ease-out 1s forwards

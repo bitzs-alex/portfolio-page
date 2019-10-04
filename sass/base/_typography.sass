@@ -1,0 +1,42 @@
+/*
+    Typography Style Rules
+    *****************************************/
+html
+    font: 81.25% $font-body-1
+
+body
+    font-size: 2.1rem
+
+h1
+    font-size: 5.8rem
+    font-family: $font-heading-1
+
+h2
+    font-size: 4.2rem
+    font-family: $font-heading-2
+    font-weight: bold
+
+h3
+    font-size: 2.6rem
+    font-family: $font-heading-1
+
+// To be called in media-queries.sass file
+@mixin html--lg()
+    html
+        font-size: 62.5%
+
+@mixin html--sm()
+    html
+        font-size: 56.25%
+
+@mixin body--md()
+    body
+        font-size: 1.7rem
+
+@mixin body--sm()
+    body
+        font-size: 1.4rem
+
+@mixin h1--sm()
+    h1
+        font-size: 4rem
